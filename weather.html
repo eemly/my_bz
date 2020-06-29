@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lib/bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+</head>
+
+<body id="weather-body">
+    <div class="alert alert-info container">
+
+        <div class="row">
+            <div class="col-4"><b>Heti időjárás-előrejelzés</b></div>
+            <div class="col-4"></div>
+            <div class="col-4 text-right"><b>Ajánlatunk erre a napra:</b></div>
+        </div>
+        <div class="row">
+
+            <div class="col-4"><span id="today-degree">0</span> &degC (<span id="today-fahrenheit">0</span> &degF)</div>
+            <div class="col-4">
+                <form>
+                    <div class="form-group col-auto">
+                        <select class="custom-select" name="days-of-week" id="days-of-week">
+                            <option selected>Válaszd ki a napot!</option>
+                            <option value="0">Hétfő</option>
+                            <option value="1">Kedd</option>
+                            <option value="2">Szerda</option>
+                            <option value="3">Csütörtök</option>
+                            <option value="4">Péntek</option>
+                            <option value="5">Szombat</option>
+                            <option value="6">Vasárnap</option>
+                        </select>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-4 text-right">
+                <i><span id="today-offer"></span></i>
+            </div>
+        </div>
+
+        <div id="min-max-avg" class="row">
+            <div class="col-4 text-left">
+                <small>MIN: <span id="min-degree">0</span> &degC (<span id="min-fahrenheit">0</span> &degF)</small>
+            </div>
+            <div class="col-4 text-center">
+                <small>AVG: <span id="avg-degree">0</span> &degC (<span id="avg-fahrenheit">0</span> &degF)</small>
+            </div>
+            <div class="col-4 text-right">
+                <small>MAX: <span id="max-degree">0</span> &degC (<span id="max-fahrenheit">0</span> &degF)</small>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="js/widget.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="js/include.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bsmin.css" />
+    <title>Orders</title>
+</head>
+
+<body>
+    <div id="navbar-included"></div>
+    <div id="weather-included"></div>
+    <!-- <iframe src="weather.html" frameborder="0" width=100%></iframe> -->
+
+    <div class="container">
+        <h3>Hamburger-rendelés</h3>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <fieldset>
+                    <legend>Bejelentkezés</legend>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address:</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email address" value="kiss.janos@gmail.com"
+                                readonly />
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" />
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </form>
+                </fieldset>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <fieldset>
+                    <legend>Rendelés vendégként</legend>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Név:*</label>
+                            <input id="name" name="name" type="text" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:*</label>
+                            <input id="email" name="email" type="email" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Cím:*</label>
+                            <input id="address" name="address" type="text" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Megjegyzés:</label>
+                            <textarea id="comment" name="comment" class="form-control" rows="5"></textarea>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <fieldset>
+                    <legend>Mit rendelsz?</legend>
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <strong>Kedves Vásárlónk!</strong><br>
+                        Kérjük, a rendeléshez töltsd ki az űrlapot!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="order-form" action="">
+
+                        <div class="form-group">
+                            <label for="">Szósz:</label>
+                            <select id="sauceSelect" name="sauceSelect" class="form-control"></select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label label-block" for="extra">Extrák:</label>
+
+                            <div class="form-check">
+                                <input checked class="form-check-input" id="nothing" name="nothing" type="checkbox"
+                                    value="1200" />
+                                <label class="form-check-label" for="nothing"> <em>nem kérek extrát </em>(alap
+                                    hamburger: 1200 Ft) </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="coleshaw" name="CB" type="checkbox" value="400" />
+                                <label class="form-check-label" for="coleshaw">coleshaw (+400 Ft)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="double-cheese" name="CB" type="checkbox"
+                                    value="300" />
+                                <label class="form-check-label" for="double-cheese">dupla sajt (+300 Ft)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="doube-meat" name="CB" type="checkbox"
+                                    value="1000" />
+                                <label class="form-check-label" for="double-meat">dupla hús (+1000 Ft)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="bacon" name="CB" type="checkbox" value="500" />
+                                <label class="form-check-label" for="bacon">bacon (+500 Ft)</label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="amount-input">Mennyiség:</label>
+                            <input id="amount-input" type="number" name="amount-input" class="form-control" value="1" />
+                            <small class="form-text text-muted">Minimum 1 db, maximum 10 db rendelhető!</small>
+                        </div>
+
+                        <div id="amount-text" class="form-group">Fizetendő: <span class="show-amount">0</span> Ft
+                        </div>
+
+                        <button type="button" class="btn btn-primary">Megrendelés
+                        </button>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/widget.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/include-controller.js"></script>
+</body>
+
+</html>
